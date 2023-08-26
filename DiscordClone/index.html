@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DiscordClone - Jaydeep Bariya</title>
     <link href="main.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
@@ -11,16 +10,16 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto bg-white mx-auto">
     <div
       id="wrapper"
-      class="container w-[100%] overflow-x-hidden overflow-y-auto"
+      class="w-full min-h-screen bg-white"
     >
       <!-- Navbar -->
-      <div id="nav" class="flex justify-around p-6 bg-blue-600">
+      <div id="nav" class="flex justify-around items-center p-6 bg-blue-600">
         <img src="./images/logo.svg" alt="Logo" class="h-[2.25rem]" />
 
-        <ul class="w-[40%] flex justify-between">
+        <ul class="w-[40%] flex justify-center gap-10 items-center max-lg:hidden">
           <li>
             <a
               href="#"
@@ -72,36 +71,26 @@
           </li>
         </ul>
 
+        <img src="./images/hamburger-png.png" width="50px" height="50px" class="hidden max-lg:block"/>
+
         <div
-          class="w-[4rem] font-Whitney border-none outline-none bg-white text-black text-center p-2 rounded-full hover:shadow-2xl shadow-black text-blue-700 cursor-pointer"
+          class="w-[4rem] font-Whitney border-none outline-none bg-white text-center p-2 rounded-full hover:shadow-2xl shadow-black text-blue-700 cursor-pointer"
         >
           Login
         </div>
       </div>
-
+      <!-- Hero Section -->
       <div
         id="hero"
-        class="bg-blue-600 w-[100%] h-[80vh] relative bg-[url(./images/Image0.svg)] bg-no-repeat pt-10"
+        class="relative w-full bg-[url(./images/Image0.svg)] bg-no-repeat py-20 bg-blue-600 flex flex-col justify-between items-center"
       >
-        <!-- <img src="./images/Image0.svg" alt="BackgroundImage1" class="relative"> -->
-        <img
-          src="./images/Image2.svg"
-          alt="BackgroundImage2"
-          class="absolute bottom-0 -left-64"
-        />
-        <img
-          src="./images/Image1.svg"
-          alt="BackgroundImage3"
-          class="absolute bottom-0 -right-48"
-        />
-
         <div class="flex-col justify-center w-[60%] mx-auto mt-12">
           <h1
             class="uppercase font-Ginto font-bold text-white text-[3.6rem] space-x-1 text-center"
           >
             imagine a place...
           </h1>
-          <p class="lowercase font-Whitney text-center text-xl text-white p-3">
+          <p class="lowercase font-Whitney text-center text-xl text-white p-3 w-[70%] mx-auto">
             ...where you can belong to a school club, a gaming group, or a
             worldwide art community. Where just you and a handful of friends can
             spend time together. A place that makes it easy to talk every day
@@ -110,7 +99,7 @@
 
           <div class="flex justify-center m-10 align-middle">
             <div
-              class="bg-white text-black text-lg flex justify-evenly items-center rounded-full m-2 p-4 hover:shadow-2xl shadow-black text-blue-700 cursor-pointer"
+              class="bg-white text-lg flex justify-evenly items-center rounded-full m-2 px-4 py-1 hover:shadow-2xl shadow-black text-blue-700 cursor-pointer"
             >
             <i class='bx bxs-download'></i>
             <div>Download for Windows</div>
@@ -123,61 +112,66 @@
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="w-full flex justify-between items-center absolute bottom-0">
+          <img src="./images/Image1.svg" class="w-[500px] -z-4 max-lg:hidden" alt="image 1"/>
+          <img src="./images/Image2.svg" class="w-[500px] -z-4 max-lg:hidden" alt="image 2"/>
+        </div>
+      </div>
+      <!-- Section 1 -->
       <section
         id="section1"
-        class="bg-white h-[100%] w-[100%] my-32 mx-auto flex justify-center items-center"
+        class="bg-white h-full w-full my-32 mx-auto flex max-lg:flex-col justify-center items-center"
       >
-        <img src="./images/section1Image.svg" alt="" />
+        <img src="./images/section1Image.svg" alt="section 1 image" class="w-[600px]"/>
 
         <div id="section1_text" class="w-[400px] flex flex-col justify-center">
-          <h2 class="font-black text-[2.5rem] font-Ginto">
+          <h2 class="font-black text-[2.5rem] font-Ginto max-lg:text-center">
             Create an invite-only place where you belong
           </h2>
-          <p class="lowercase font-Whitney text-left text-xl text-black mt-5">
+          <p class="lowercase font-Whitney text-left text-xl text-black mt-5 max-lg:text-center">
             Discord servers are organized into topic-based channels where you
             can collaborate, share, and just talk about your day without
             clogging up a group chat.
           </p>
         </div>
       </section>
-
+      <!-- Section 2 -->
       <section
         id="section2"
-        class="bg-gray-300 h-[100%] w-[100%] my-32 mx-auto flex justify-center items-center py-10"
+        class="bg-gray-300 h-full w-full my-32 mx-auto flex max-lg:flex-col justify-center items-center py-10"
       >
         <div id="section2_text" class="w-[400px] flex flex-col justify-center">
-          <h2 class="font-black text-[2.5rem] font-Ginto">
+          <h2 class="font-black text-[2.5rem] font-Ginto max-lg:text-center">
             Where hanging out is easy
           </h2>
-          <p class="lowercase font-Whitney text-left text-xl text-black mt-5">
+          <p class="lowercase font-Whitney text-left text-xl text-black mt-5 max-lg:text-center">
             Grab a seat in a voice channel when you’re free. Friends in your
             server can see you’re around and instantly pop in to talk without
             having to call.
           </p>
         </div>
-        <img src="./images/section2Image.svg" alt="" />
+        <img src="./images/section2Image.svg" alt="section 2 image" class="max-lg:mx-auto w-[600px]"/>
       </section>
-
+      <!-- Section 3 -->
       <section
         id="section3"
-        class="bg-white h-[100%] w-[100%] my-32 mx-auto flex justify-center items-center"
+        class="bg-white h-full w-full my-32 flex max-lg:flex-col justify-center items-center"
       >
-        <img src="./images/section3Image.svg" alt="" />
+        <img src="./images/section3Image.svg" alt="section 3 image" class="w-[600px] " />
 
-        <div id="section3_text" class="w-[400px] flex flex-col justify-center">
+        <div id="section3_text" class="w-[400px] flex flex-col justify-center max-lg:text-center">
           <h2 class="font-black text-[2.5rem] font-Ginto">
             From few to a fandom
           </h2>
-          <p class="lowercase font-Whitney text-left text-xl text-black mt-5">
+          <p class="lowercase font-Whitney text-left text-xl text-black mt-5 max-lg:text-center">
             Get any community running with moderation tools and custom member
             access. Give members special powers, set up private channels, and
             more.
           </p>
         </div>
       </section>
-
+      <!-- Section 4 -->
       <section
         id="section4"
         class="bg-gray-200 flex flex-col justify-center items-center mx-auto text-center py-32"
@@ -215,11 +209,12 @@
         </div>
       </section>
 
-      <section id="section5" class="bg-black text-white overflow-x-hidden">
-        <div id="content" class="w-[80%] mx-auto py-24">
-          <div id="links" class="flex flex-row space-between items-start">
+        <!-- Footer -->
+      <section id="section5" class="bg-black text-white w-full">
+        <div id="content" class="mx-auto py-24 w-11/12">
+          <div id="links" class="flex flex-wrap space-between items-start">
             <div id="region" class="w-[35%]">
-              <div class="flex flex-row justify-start items-center">
+              <div class="flex flex-wrap max-md:flex-col justify-start items-center">
               <!-- country icon - USA-->
               <p class="mr-3">English, USA</p>
               <i class='bx bx-down-arrow'></i>

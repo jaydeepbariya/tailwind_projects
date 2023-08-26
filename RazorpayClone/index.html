@@ -29,15 +29,15 @@
     </style>
 
   </head>
-  <body>
-    <div class="overflow-x-hidden">
+  <body class="w-[100vw] min-h-screen overflow-x-hidden overflow-y-auto">
+    <div class="w-full min-h-screen ">
       <!-- Navbar -->
-    <nav class="flex justify-center items-center bg-deepBlue mx-auto gap-6">
+    <nav class="w-full flex flex-wrap max-lg:flex-col justify-center items-center bg-deepBlue mx-auto gap-6">
       <a href="#">
         <img src="./images/logo.svg" alt="Logo" width="125px" height="30px" class="ml-10 my-auto"/>
       </a>
 
-      <ul class="flex justify-between gap-6 mt-5">
+      <ul class="flex justify-between gap-6 mt-5 max-lg:hidden">
         <li class="group flex-col justify-center">
           <div
             class="font-mullish text-white text-sm font-bold transition-all duration-200 group-hover:text-lightBlue"
@@ -104,17 +104,21 @@
         </li>
       </ul>
 
+      <img src="./images/hamburger.png" alt="hamburger" class="hidden w-[50px] h-[50px] mx-auto max-lg:block"/>
+
       <div class="flex items-center justify-center gap-3 mx-auto">
         <img src="./images/india-flag.svg" alt="Flag">
 
         <button class="p-1 px-4 border border-1 rounded-sm font-mullish text-sm text-white py-2">Log In</button>
         <button class="p-1 px-4 bg-white border border-1 rounded-sm font-mullish font-bold text-sm text-deepBlue transition-all duration-200 py-2 hover:text-lightBlue">
-            Sign Up
+          <span>Sign Up</span>
+          <i class='bx bx-right-arrow-alt'></i>
+          
         </button>
       </div>
     </nav>
-
-    <div id="hero" class="relative mx-auto bg-deepBlue flex items-center justify-center gap-7">
+    <!-- Hero Section -->
+    <div id="hero" class="relative mx-auto pt-12 bg-deepBlue flex max-lg:flex-col max-lg:text-center items-center justify-center gap-7">
       
       <div id="content" class="flex-col text-white w-70">
           <h1 class="font-mullish text-4xl font-bold my-4">Power your finance, <br>grow your business</h1>
@@ -122,20 +126,20 @@
           <p class="text-justify w-80 text-lg">Accept payments from customers. Automate payments to vendors & 
             employees. Never run out of working capital.
           </p>
-          <button class="bg-lightBlue p-3 rounded mt-4 transition-all duration-200 hover:bg-blue-400">Sign Up Now</button>
+          <button class="bg-lightBlue p-3 rounded mt-4 transition-all duration-200 hover:bg-blue-400"><span>Sign Up Now</span><i class='bx bx-right-arrow-alt'></i></button>
 
       </div>
       
       <div id="picture">
         <img src="./images/clone2/hero-illustration.jpg" alt="" width="650px" class="scale-75">
-      </div>      
+      </div>
+      
+      <img src="./images/clone2/hero-shape.svg" alt="" class="absolute -bottom-[100px] w-full object-fill">
+
     </div>
     
-    <div id="shape">
-      <img src="./images/clone2/hero-shape.svg" alt="" class="relative top-0 right-0 left-0 w-full object-fill scale-105">
-    </div>
-
-    <div id="features" class="relative mt-100 mx-auto w-max bg-white">
+    <!-- Features -->
+    <div id="features" class="w-11/12 relative mt-[200px] mx-auto bg-white">
       <img src="./images/clone2/feature-section1-dottedrows.png" alt="" loading="lazy" width="233" height="167"
         class="absolute top-[-3rem] left-[-9rem] inline-block"
       >
@@ -147,7 +151,7 @@
       <h2 class="text-center font-bold text-lg">Accept Payments with Razorpay Payment Suite</h2>
       <div class="mx-auto w-5 h-1 bg-greenLight mt-4"></div>
 
-      <div id="content" class="flex justify-center p-4 rounded mb-5 w-[500] mx-auto mt-10 border-2">
+      <div id="content" class="flex max-lg:flex-col max-lg:items-center justify-center p-4 rounded mb-5 mx-auto mt-10 border-2 bg-white">
         <div class="textual" class="flex-col justify-center">
             <h3 class="font-mullish font-bold text-3xl w-80">Supercharge your business with the all-powerful <span class="text-lightBlue">Payment Gateway</span></h3>
             
@@ -179,7 +183,7 @@
             </ul>
 
             <div id="btns" class="flex mt-10">
-              <button class="bg-lightBlue300 p-2 rounded text-white group hover: bg-lightBlue500 transition-all duration-200">Sign Up Now <i class='bx bx-right-arrow-alt group-hover:bg-lightBlue500'></i></button>
+              <button class="p-2 rounded text-white group hover: bg-lightBlue500 transition-all duration-200">Sign Up Now <i class='bx bx-right-arrow-alt group-hover:bg-lightBlue500'></i></button>
 
               <div id="hyperlink" class="p-2 rounded text-black">
                 <a href="#">Know More <i class='bx bx-right-arrow-alt group-hover:bg-lightBlue500'></i></a>
@@ -191,7 +195,7 @@
         <img id="bgImage" src="./images/clone2/payment-suite.png" width="500px" height="400px"></img>
       </div>
 
-      <div class="w-full flex grid grid-cols-3 gap-4 mt-10">
+      <div class="w-full grid place-content-center max-md:grid-rows-9 max-md:grid-cols-1 grid-cols-3 gap-4 grid-flow-row mt-10">
         <!--Box1-->
         <div class="w-full min-h-[15rem] relative cursor-pointer">
             <img src="./images/clone2/payment-link-icon.svg" alt=""
@@ -534,7 +538,7 @@
         <img src="./images/clone2/x-flame-2.png" alt="" class="absolute top-[300px] right-[100px] w-[150px]">
       </div>
 
-      <div class="flex justify-center items-center border-slate-700 p-5">
+      <div class="flex max-md:flex-col justify-center items-center border-slate-700 p-5">
           <div id="textcontent" class="flex-col gap-4">
             <div class="text-2xl font-mullish font-bold text-white gap-3 w-[90%] inline">Manage your company's finances with 
               <img src="./images/clone2/razorpayX.svg" alt="" 
@@ -576,7 +580,7 @@
 
   </div>
 
-  <div id="grid-cards" class="flex w-[78%] mx-auto ml-[230px] my-10 gap-3">
+  <div id="grid-cards" class="flex max-lg:flex-col justify-center items-center mx-auto ml-[230px] my-10 gap-3 max-lg:hidden">
     <div class="w-full min-h-[13rem] max-w-[28%] relative gap-3 cursor-pointer">
       <img src="./images/clone2/payment-link-icon.svg" alt=""
       class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[8]
@@ -739,28 +743,17 @@
     
   </div>
 
-  <div id="check-demo" class="flex justify-center items-center gap-5 bg-deepBlue w-[60%] mx-auto min-h-[80px] border rounded-sm border-slate-700">
+  <div id="check-demo" class="w-11/12 px-3 py-2 flex max-md:flex-col justify-center items-center gap-5 bg-deepBlue mx-auto border rounded-sm border-slate-700">
     <p class="text-white">Checkout the live demo to learn how RazorpayX works. No Sign-up required !</p>
-    <button class="bg-lightBlue300 p-2 rounded text-white group hover: bg-lightBlue500 transition-all duration-200">Check out the Demo
+    <button class="p-2 rounded text-white group hover: bg-lightBlue500 transition-all duration-200">Check out the Demo
       <i class='bx  bx-right-arrow-alt group-hover:bg-lightBlue500'></i>
-
     </button>
-
-    <!-- <div class="z-5 flex justify-center h-[60px] w-[40px] skew-x-6 bg-greenLight">
-      <i class='bx  bx-right-arrow-alt group-hover:bg-lightBlue500'></i>
-    </div> -->
   </div>
   </div>
 
   <!-- new features -->
-  <div class="relative w-full flex justify-center items-center mt-100 mx-auto">
-      <img src="./images/clone2/feature-section1-dottedrows.png" alt=""
-        class="absolute top-[8rem] right-[10rem]"
-      >
-      <img src="./images/clone2/feature-section1-dottedrows.png" alt=""
-        class="absolute top-[1rem] left-[7rem]"
-        >
-      <div class="relative grid grid-cols-3 mx-auto w-[75%] mb-10">
+  <div class="w-11/12 mx-auto flex justify-center items-center mt-100">
+      <div class="relative place-content-center grid grid-cols-3 max-lg:grid-cols-2 max-lg:grid-rows-4 max-sm:grid-cols-1 max-sm:grid-rows-8 mx-auto w-[75%] mb-10">
         <div class="w-[50%] h-[200px]">
           <p class="font-bold text-3xl">New in the <span class="text-lightBlue300">Razorpay</span> Product Suite</p>
         </div>
@@ -804,49 +797,49 @@
   </div>
 
   <!-- core features -->
-  <div class="w-[100%] bg-[url(/images/clone2/core-features-sectionBg.svg)] bg-no-repeat bg-cover mt-10">
-      <div class="flex-col gap-[5rem] mx-auto justify-center py-20 w-[80%]">
+  <div class="w-full min-h-max bg-blue-600 bg-no-repeat bg-cover mt-10">
+      <div class="flex-col gap-[5rem] mx-auto justify-center py-10 w-11/12 min-h-max">
         <h2 class="text-center font-mullish mx-auto font-bold text-xl text-white">Features</h2>
         <div class="h-1 w-6 bg-greenLight mx-auto mt-3"></div>
         <p class="text-center mx-auto text-white">Empower your business with all the right tools to accept <br>online payments and provide the best customer experience</p>
 
-        <div class="w-[80%] grid grid-cols-4 mx-auto my-5 gap-5">
-          <div class="flex-col justify-start text-white w-[20]">
+        <div class="w-full grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 place-content-center mx-auto my-5 gap-5">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
           </div>
-          <div class="flex-col justify-start text-white w-[20]">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
           </div>
-          <div class="flex-col justify-start text-white w-[20]">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
           </div>
-          <div class="flex-col justify-start text-white w-[20]">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
           </div>
-          <div class="flex-col justify-start text-white w-[20]">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
           </div>
-          <div class="flex-col justify-start text-white w-[20]">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
           </div>
-          <div class="flex-col justify-start text-white w-[20]">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
           </div>
-          <div class="flex-col justify-start text-white w-[20]">
+          <div class="flex-col justify-start items-center p-4 text-white">
             <img src="./images/clone2/instant-activation-icon.svg" alt="" width="40px">
             <h3 class="text-l font-bold font-mullish">Instant Activation</h3>
             <p class="text-sm ">Get activated and transact within 2 minutes. Completely online onboarding with premium documentation</p>
@@ -856,9 +849,9 @@
   </div>
 
   <!-- join razorpay section -->
-  <div class="relative w-full flex justify-center items-center bg-white my-[10rem]">
-    <div class="flex justify-center gap-5 w-[70%] mx-auto">
-      <div class="flex-col justify-center p-4 w-[60%]">
+  <div class=" w-full min-h-max flex justify-center items-center bg-white my-20">
+    <div class="flex justify-center items-center max-lg:flex-col max-lg:my-10 gap-5 w-11/12 mx-auto">
+      <div class="flex-col justify-center p-4 ">
         <h3 class="font-mullish font-bold text-2xl text-deepBlue">Join the 50,00,000+ businesses using Razorpay</h3>
         <div class="h-1 w-6 bg-greenLight my-5"></div>
         <p class="mt-3 opacity-70">We make it easier for you to focus on building grate products while we work on simlifying the payments for you</p>
@@ -877,12 +870,12 @@
   </div>
 
   <!-- experience section - slideshow -->
-  <section class="relative">
+  <section class="relative flex flex-col justify-center items-center mx-auto">
 
-    <div class="w-11/12 max-w-[1300px] mx-auto relative py-20">
+    <div class="w-11/12 flex flex-col justify-center items-center mx-auto py-20">
 
       <img src="./images/clone2/feature-section1-dottedrows.png" alt=""
-      class="absolute w-[200px] top-[8rem] left-[2rem] -z-10">
+      class="">
 
       <h2 class="font-mullish font-extrabold text-2xl text-deepBlueHead text-center">An Experience
         <br>People Love to Talk About</h2>
@@ -915,7 +908,7 @@
 
 
     <!-- main content -->
-    <div class="flex flex-row max-w-[960px] items-center mx-auto my-20 space-x-[10rem]">
+    <div class="flex max-lg:flex-col max-lg:gap-10 justify-center items-center mx-auto my-20 gap-20">
       <!--left image -->
       <img src="./images/clone2/testimonial.jpg" alt=""
       height="320px"
@@ -956,11 +949,10 @@
   </div>
 
   </section>
-
     <!--CTA-->
     <section class="bg-[url(/images/clone2/CTABg.svg)] w-full h-full bg-no-repeat bg-cover relative ctaSection min-h-[510px]">
       <!--main content box-->
-      <div class="w-11/12 max-w-[1080px] relative flex flex-row items-center mx-auto justify-between space-x-20 pt-16">
+      <div class="w-11/12 max-w-[1080px] relative flex max-lg:flex-col items-center mx-auto justify-center space-x-20 pt-16">
   
         <!--left part-->
         <div class="flex flex-col gap-5 mt-12 max-w-[600px]">
@@ -968,7 +960,7 @@
           <div class="w-6 h-1 bg-greenLight"></div>
           <p class="font-mullish text-white">Sign up now to experience the future of payments and offer <br> your customers the best checkout experience.</p>
   
-          <ul class="flex flex-row flex-wrap gap-x-11 text-white gap-y-3">
+          <ul class="flex flex-row max-lg:flex-col flex-wrap gap-x-11 text-white gap-y-3">
             <li class="font-mullish text-white flex flex-row ">
               <i data-feather="check" class="text-greenLight"></i>
               <span>Quick Onboarding
@@ -1012,10 +1004,7 @@
           
   
         </div>
-  
-        <!--right side wali image-->
         <img src="./images/clone2/ctaImg.svg" alt="" width="240px" height="282px" class="mt-16 pt-3">
-  
       </div>
     </section>
 
@@ -1029,7 +1018,7 @@
       class="w-10/12 pt-[400px] pb-10 md:pt-[350px] md:my-0 md:w-11/12 max-w-[1080px] mx-auto flex flex-col space-y-6 lg:space-y-0 lg:space-x-4 lg:flex-row justify-between"
     >
       <!-- column - 1 -->
-      <div class="flex flex-col md:max-w-[340px] lg:max-w-[260px]">
+      <div class="flex flex-col mx-auto md:max-w-[340px] lg:max-w-[260px]">
         <img
           src="/images/clone2/logo-dark.svg"
           loading="lazy"
